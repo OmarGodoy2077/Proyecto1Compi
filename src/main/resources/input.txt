@@ -1,0 +1,16 @@
+var contador: int = 0;
+
+function incrementar() {
+    contador = contador + 1;
+    print(contador);
+}
+
+while (contador < 5) {
+    incrementar();
+}
+
+if (contador == 5) {
+    print("¡Contador llegó a 5!");
+} else {
+    print("Error en contador");
+}
