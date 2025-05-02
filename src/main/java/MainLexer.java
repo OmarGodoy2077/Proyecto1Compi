@@ -11,6 +11,8 @@ import java.util.*;
 import java.util.List;
 
 public class MainLexer {
+    private static JFrame ventanaTokens = null;
+    private static JFrame ventanaArbol = null;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
@@ -67,6 +69,9 @@ public class MainLexer {
             // Parsear la expresión
             ParseTree tree = parser.program();
 
+            // Cerrar ventanas previas de tokens y árbol
+            cerrarVentanas();
+
             // Mostrar tokens
             mostrarTokens(tokens);
 
@@ -106,6 +111,8 @@ public class MainLexer {
 
             // Parsear el archivo
             ParseTree tree = parser.program();
+            // Cerrar ventanas previas de tokens y árbol
+            cerrarVentanas();
 
             // Mostrar tokens
             mostrarTokens(tokens);
@@ -123,6 +130,15 @@ public class MainLexer {
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error durante el análisis: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    // Cerrar las ventanas abiertas previamente
+    private static void cerrarVentanas() {
+        if (ventanaTokens != null && ventanaTokens.isVisible()) {
+            ventanaTokens.dispose();  // Cerrar ventana de tokens
+        }
+        if (ventanaArbol != null && ventanaArbol.isVisible()) {
+            ventanaArbol.dispose();  // Cerrar ventana del árbol
         }
     }
 
