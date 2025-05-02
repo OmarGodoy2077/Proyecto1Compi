@@ -64,7 +64,7 @@ type: INT | FLOAT | BOOL;
 
 // ================= Lexer Rules =================
 
-// Palabras reservadas
+
 IF: 'if';
 ELSE: 'else';
 WHILE: 'while';
@@ -87,10 +87,10 @@ FLOAT_LITERAL: [0-9]+'.'[0-9]+;
 BOOL_LITERAL: TRUE | FALSE;
 STRING_LITERAL: '"' ( ~["\\] | '\\' . )* '"';
 
-// Identificadores
+
 ID: [a-zA-Z_][a-zA-Z_0-9]*;
 
-// Operadores y símbolos
+
 PLUS: '+';
 MINUS: '-';
 MUL: '*';

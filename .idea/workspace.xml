@@ -7,6 +7,7 @@
     <list default="true" id="316c65ae-85b0-4107-b148-50cb55614c05" name="Changes" comment="primero1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/javagen/MiniLang.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/javagen/MiniLang.g4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <workItem from="1745983326627" duration="427000" />
       <workItem from="1745983766244" duration="7600000" />
       <workItem from="1746043975138" duration="6753000" />
-      <workItem from="1746120313361" duration="2780000" />
+      <workItem from="1746120313361" duration="5442000" />
     </task>
     <task id="LOCAL-00001" summary="primero">
       <option name="closed" value="true" />
@@ -81,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746056800936</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="primero1">
+      <option name="closed" value="true" />
+      <created>1746153364941</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746153364941</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

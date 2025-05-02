@@ -62,20 +62,19 @@ public class MainLexer {
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MiniLangParser parser = new MiniLangParser(tokens);
 
-            // Agregar un ErrorListener para capturar errores
             MyErrorListener errorListener = new MyErrorListener();
             parser.addErrorListener(errorListener);
 
-            // Parsear la expresión
+
             ParseTree tree = parser.program();
 
-            // Cerrar ventanas previas de tokens y árbol
+
             cerrarVentanas();
 
-            // Mostrar tokens
+
             mostrarTokens(tokens);
 
-            // Verificar errores sintácticos
+
             if (errorListener.hayErrores()) {
                 String errores = errorListener.getErrores();
                 JOptionPane.showMessageDialog(null, errores, "Errores de Sintaxis", JOptionPane.ERROR_MESSAGE);
@@ -83,7 +82,7 @@ public class MainLexer {
                 JOptionPane.showMessageDialog(null, "Análisis completado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
             }
 
-            // Mostrar árbol de derivación
+
             mostrarArbol(tree, parser);
 
         } catch (Exception e) {
@@ -105,19 +104,19 @@ public class MainLexer {
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MiniLangParser parser = new MiniLangParser(tokens);
 
-            // Agregar un ErrorListener para capturar errores
+
             MyErrorListener errorListener = new MyErrorListener();
             parser.addErrorListener(errorListener);
 
-            // Parsear el archivo
+
             ParseTree tree = parser.program();
-            // Cerrar ventanas previas de tokens y árbol
+
             cerrarVentanas();
 
-            // Mostrar tokens
+
             mostrarTokens(tokens);
 
-            // Verificar errores sintácticos
+
             if (errorListener.hayErrores()) {
                 String errores = errorListener.getErrores();
                 JOptionPane.showMessageDialog(null, errores, "Errores de Sintaxis", JOptionPane.ERROR_MESSAGE);
@@ -125,14 +124,14 @@ public class MainLexer {
                 JOptionPane.showMessageDialog(null, "Análisis completado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
             }
 
-            // Mostrar árbol de derivación
+
             mostrarArbol(tree, parser);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error durante el análisis: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
-    // Cerrar las ventanas abiertas previamente
+
     private static void cerrarVentanas() {
         if (ventanaTokens != null && ventanaTokens.isVisible()) {
             ventanaTokens.dispose();  // Cerrar ventana de tokens
@@ -142,7 +141,7 @@ public class MainLexer {
         }
     }
 
-    // Función para seleccionar un archivo usando un cuadro de diálogo
+
     private static String seleccionarArchivo() {
         final JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Selecciona el archivo a analizar");
@@ -158,7 +157,7 @@ public class MainLexer {
         return null;
     }
 
-    // Función para mostrar los tokens en una ventana nueva
+
     private static void mostrarTokens(CommonTokenStream tokens) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Tokens Reconocidos");
@@ -182,19 +181,18 @@ public class MainLexer {
         });
     }
 
-    // Función para mostrar el árbol de derivación usando ANTLR
+
     private static void mostrarArbol(ParseTree tree, MiniLangParser parser) {
         SwingUtilities.invokeLater(() -> {
             Trees.inspect(tree, parser);
         });
     }
 
-    // Clase personalizada para escuchar errores
-    // Clase personalizada para escuchar errores
+
     static class MyErrorListener extends BaseErrorListener {
         private final List<String> errores = new ArrayList<>();
 
-        // Método correcto sin la anotación @Override
+
         public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
             errores.add(String.format("Error en línea %d:%d: %s", line, charPositionInLine, msg));
         }
@@ -209,3 +207,4 @@ public class MainLexer {
     }
 
 }
+
