@@ -59,21 +59,31 @@ public class MainLexer {
 
             CharStream input = CharStreams.fromString(expresion);
             MiniLangLexer lexer = new MiniLangLexer(input);
+
+            // Captura de errores léxicos
+            List<? extends Token> tokenList = lexer.getAllTokens();
+            for (Token token : tokenList) {
+                String tipo = MiniLangLexer.VOCABULARY.getSymbolicName(token.getType());
+                if ("ERROR".equals(tipo)) {
+                    JOptionPane.showMessageDialog(null,
+                            "Error léxico en línea " + token.getLine() + ": '" + token.getText() + "' no es un token válido.",
+                            "Error léxico",
+                            JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+            }
+
+            lexer.reset(); // Reiniciar lexer para volver a analizar desde cero
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MiniLangParser parser = new MiniLangParser(tokens);
 
             MyErrorListener errorListener = new MyErrorListener();
             parser.addErrorListener(errorListener);
 
-
             ParseTree tree = parser.program();
 
-
             cerrarVentanas();
-
-
             mostrarTokens(tokens);
-
 
             if (errorListener.hayErrores()) {
                 String errores = errorListener.getErrores();
@@ -82,13 +92,13 @@ public class MainLexer {
                 JOptionPane.showMessageDialog(null, "Análisis completado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
             }
 
-
             mostrarArbol(tree, parser);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error durante el análisis: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
 
     private static void analizarArchivo() {
         try {
@@ -101,21 +111,31 @@ public class MainLexer {
 
             CharStream input = CharStreams.fromFileName(ruta);
             MiniLangLexer lexer = new MiniLangLexer(input);
+
+            // Captura de errores léxicos
+            List<? extends Token> tokenList = lexer.getAllTokens();
+            for (Token token : tokenList) {
+                String tipo = MiniLangLexer.VOCABULARY.getSymbolicName(token.getType());
+                if ("ERROR".equals(tipo)) {
+                    JOptionPane.showMessageDialog(null,
+                            "Error léxico en línea " + token.getLine() + ": '" + token.getText() + "' no es un token válido.",
+                            "Error léxico",
+                            JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+            }
+
+            lexer.reset(); // Reiniciar lexer
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MiniLangParser parser = new MiniLangParser(tokens);
-
 
             MyErrorListener errorListener = new MyErrorListener();
             parser.addErrorListener(errorListener);
 
-
             ParseTree tree = parser.program();
 
             cerrarVentanas();
-
-
             mostrarTokens(tokens);
-
 
             if (errorListener.hayErrores()) {
                 String errores = errorListener.getErrores();
@@ -123,7 +143,6 @@ public class MainLexer {
             } else {
                 JOptionPane.showMessageDialog(null, "Análisis completado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
             }
-
 
             mostrarArbol(tree, parser);
 

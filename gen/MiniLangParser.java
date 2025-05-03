@@ -1,4 +1,4 @@
-// Generated from C:/Users/Omar Godoy/IdeaProjects/untitled/src/main/javagen/MiniLang.g4 by ANTLR 4.13.2
+// Generated from C:/Users/omarg/IdeaProjects/Proyecto1Compi/src/main/javagen/MiniLang.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -21,7 +21,7 @@ public class MiniLangParser extends Parser {
 		FLOAT_LITERAL=18, BOOL_LITERAL=19, STRING_LITERAL=20, ID=21, PLUS=22, 
 		MINUS=23, MUL=24, DIV=25, GT=26, LT=27, GTE=28, LTE=29, EQ=30, NEQ=31, 
 		AND=32, OR=33, NOT=34, ASSIGN=35, LPAREN=36, RPAREN=37, LBRACE=38, RBRACE=39, 
-		SEMI=40, COMMA=41, WS=42, LINE_COMMENT=43;
+		SEMI=40, COMMA=41, WS=42, LINE_COMMENT=43, ERROR=44;
 	public static final int
 		RULE_program = 0, RULE_statement = 1, RULE_block = 2, RULE_varDecl = 3, 
 		RULE_assignment = 4, RULE_functionDecl = 5, RULE_parameters = 6, RULE_parameter = 7, 
@@ -55,7 +55,7 @@ public class MiniLangParser extends Parser {
 			"FLOAT_LITERAL", "BOOL_LITERAL", "STRING_LITERAL", "ID", "PLUS", "MINUS", 
 			"MUL", "DIV", "GT", "LT", "GTE", "LTE", "EQ", "NEQ", "AND", "OR", "NOT", 
 			"ASSIGN", "LPAREN", "RPAREN", "LBRACE", "RBRACE", "SEMI", "COMMA", "WS", 
-			"LINE_COMMENT"
+			"LINE_COMMENT", "ERROR"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -1517,7 +1517,7 @@ public class MiniLangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001+\u00c5\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001,\u00c5\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+

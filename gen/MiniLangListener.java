@@ -1,4 +1,4 @@
-// Generated from C:/Users/Omar Godoy/IdeaProjects/untitled/src/main/javagen/MiniLang.g4 by ANTLR 4.13.2
+// Generated from C:/Users/omarg/IdeaProjects/Proyecto1Compi/src/main/javagen/MiniLang.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**

@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="316c65ae-85b0-4107-b148-50cb55614c05" name="Changes" comment="primero1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLang.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLang.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLang.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLang.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/MiniLangVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/MiniLangVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomErrorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomErrorListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainLexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/javagen/MiniLang.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/javagen/MiniLang.g4" afterDir="false" />
     </list>
@@ -49,10 +60,17 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,6 +83,8 @@
       <workItem from="1745983766244" duration="7600000" />
       <workItem from="1746043975138" duration="6753000" />
       <workItem from="1746120313361" duration="5442000" />
+      <workItem from="1746241094818" duration="925000" />
+      <workItem from="1746278598265" duration="1268000" />
     </task>
     <task id="LOCAL-00001" summary="primero">
       <option name="closed" value="true" />

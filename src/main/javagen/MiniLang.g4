@@ -117,3 +117,9 @@ WS: [ \t\r\n]+ -> skip ;
 
 // Ignorar comentarios
 LINE_COMMENT: '//' ~[\r\n]* -> skip ;
+ERROR: . ; // Esto se puede usar para capturar errores léxicos si lo necesitas.
+
+INVALID_ID : [0-9]+ [a-zA-Z_]+ -> type(ERROR); // Identificadores inválidos que empiezan con número
+
+ERROR_CHAR: . -> type(ERROR); // Captura cualquier otro carácter no válido
+

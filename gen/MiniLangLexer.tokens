@@ -41,6 +41,7 @@ SEMI=40
 COMMA=41
 WS=42
 LINE_COMMENT=43
+ERROR=44
 ':'=1
 'if'=2
 'else'=3
